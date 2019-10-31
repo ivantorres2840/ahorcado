@@ -1,5 +1,6 @@
 package ahorcado;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Ahorcado {
@@ -153,7 +154,7 @@ public class Ahorcado {
 		String letra ="";
 		System.out.println("dime una letra");
 		letra=leer.nextLine();
-		boolean encontrado=true;
+		boolean encontrado=false;
 		
 		for (int i=0;i<vSolucion.length;i++) {
 			if(letra.equalsIgnoreCase(vSolucion[i])) {
@@ -170,9 +171,19 @@ public class Ahorcado {
 			}
 		}
 	}
+	
+	public static String alearotio() {
+	
+		String[] lista= {"PERRO", "LAPIZ", "ORDENADOR", "TECLADO", "PROCESADOR", "SISTEMA"};
+		Random azar =new Random();
+		
+		
+		return lista[azar.nextInt(5)];
+	}
+	
 
 	public static void main(String[] args) {
-		String palabraSolucion = "HOLA";
+		String palabraSolucion = alearotio();
 		String vFallos[], vSolucion[], vHuecos[];
 		Scanner leer = new Scanner(System.in);
 
