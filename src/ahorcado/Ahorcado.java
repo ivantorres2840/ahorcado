@@ -199,7 +199,7 @@ public class Ahorcado {
 		} while(!Pierdes(vFallos) && !Ganas(vHuecos));
 
 	}
-
+//ahorcado terminado
 }
 	
 	
